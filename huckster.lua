@@ -6,7 +6,7 @@
 --================================================ [ INFO SCRIPT ] ================================================
 script_name("Huckster Helper");
 script_authors("Cherry Software");
-script_version("0.0.1");
+script_version("0.0.2");
 --================================================ [ AUTOUPDATE ] =================================================
 local enable_autoupdate = true -- false to disable auto-update + disable sending initial telemetry (server, moonloader version, script version, samp nickname, virtual volume serial number)
 local autoupdate_loaded = false
