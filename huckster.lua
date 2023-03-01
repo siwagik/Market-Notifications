@@ -318,6 +318,7 @@ local newFrame = imgui.OnFrame(
                 end
                 if menu [2] then -- Button "About the script"
                     imgui.Text(u8"Î ñêðèïòå >\n- Ïðè ïîêóïêå/ïðîäàæå â ëàâêå, âàì ïðèéäåò óâåäîìëåíèå â Telegram.")
+                    imgui.Text("Bot telegram oioioioi")			
                     imgui.Separator();
                     imgui.Text(u8"Ðàçðàáîò÷èê >");
                     imgui.SameLine();
