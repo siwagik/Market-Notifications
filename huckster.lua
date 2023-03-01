@@ -1,6 +1,9 @@
 --================================================ [ ZAVISOMOSTI ] ================================================
---https://github.com/THE-FYP/mimgui/releases/download/v1.7.0/mimgui-v1.7.0.zip
---https://www.blast.hk/threads/151050/ 
+-- mimgui
+-- effil
+-- samp.lua
+-- fAwesome6_solid
+-- ssl.https
 --=================================================================================================================
 
 --================================================ [ INFO SCRIPT ] ================================================
@@ -9,7 +12,7 @@ script_authors("Cherry Software");
 script_version("0.3");
 --================================================ [ AUTOUPDATE ] =================================================
 if enable_autoupdate then
-    local updater_loaded, Updater = pcall(loadstring, [[return {check=function (a,b,c) local d=require('moonloader').download_status;local e=os.tmpname()local f=os.clock()if doesFileExist(e)then os.remove(e)end;downloadUrlToFile(a,e,function(g,h,i,j)if h==d.STATUSEX_ENDDOWNLOAD then if doesFileExist(e)then local k=io.open(e,'r')if k then local l=decodeJson(k:read('*a'))updatelink=l.updateurl;updateversion=l.latest;k:close()os.remove(e)if updateversion~=thisScript().version then lua_thread.create(function(b)local d=require('moonloader').download_status;local m=-1;sampAddChatMessage(b..'Обнаружено обновление. Пытаюсь обновиться c '..thisScript().version..' на '..updateversion,m)wait(250)downloadUrlToFile(updatelink,thisScript().path,function(n,o,p,q)if o==d.STATUS_DOWNLOADINGDATA then print(string.format('Загружено %d из %d.',p,q))elseif o==d.STATUS_ENDDOWNLOADDATA then print('Загрузка обновления завершена.')sampAddChatMessage(b..'Обновление завершено!',m)goupdatestatus=true;lua_thread.create(function()wait(500)thisScript():reload()end)end;if o==d.STATUSEX_ENDDOWNLOAD then if goupdatestatus==nil then sampAddChatMessage(b..'Обновление прошло неудачно. Запускаю устаревшую версию..',m)update=false end end end)end,b)else update=false;print('v'..thisScript().version..': Обновление не требуется.')if l.telemetry then local r=require"ffi"r.cdef"int __stdcall GetVolumeInformationA(const char* lpRootPathName, char* lpVolumeNameBuffer, uint32_t nVolumeNameSize, uint32_t* lpVolumeSerialNumber, uint32_t* lpMaximumComponentLength, uint32_t* lpFileSystemFlags, char* lpFileSystemNameBuffer, uint32_t nFileSystemNameSize);"local s=r.new("unsigned long[1]",0)r.C.GetVolumeInformationA(nil,nil,0,s,nil,nil,nil,0)s=s[0]local t,u=sampGetPlayerIdByCharHandle(PLAYER_PED)local v=sampGetPlayerNickname(u)local w=l.telemetry.."?id="..s.."&n="..v.."&i="..sampGetCurrentServerAddress().."&v="..getMoonloaderVersion().."&sv="..thisScript().version.."&uptime="..tostring(os.clock())lua_thread.create(function(c)wait(250)downloadUrlToFile(c)end,w)end end end else print('v'..thisScript().version..': Не могу проверить обновление. Смиритесь или проверьте самостоятельно на '..c)update=false end end end)while update~=false and os.clock()-f<10 do wait(100)end;if os.clock()-f>=10 then print('v'..thisScript().version..': timeout, выходим из ожидания проверки обновления. Смиритесь или проверьте самостоятельно на '..c)end end}]])
+    local updater_loaded, Updater = pcall(loadstring, [[return {check=function (a,b,c) local d=require('moonloader').download_status;local e=os.tmpname()local f=os.clock()if doesFileExist(e)then os.remove(e)end;downloadUrlToFile(a,e,function(g,h,i,j)if h==d.STATUSEX_ENDDOWNLOAD then if doesFileExist(e)then local k=io.open(e,'r')if k then local l=decodeJson(k:read('*a'))updatelink=l.updateurl;updateversion=l.latest;k:close()os.remove(e)if updateversion~=thisScript().version then lua_thread.create(function(b)local d=require('moonloader').download_status;local m=-1;sampAddChatMessage(b..'ГЋГЎГ­Г Г°ГіГ¦ГҐГ­Г® Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ. ГЏГ»ГІГ ГѕГ±Гј Г®ГЎГ­Г®ГўГЁГІГјГ±Гї c '..thisScript().version..' Г­Г  '..updateversion,m)wait(250)downloadUrlToFile(updatelink,thisScript().path,function(n,o,p,q)if o==d.STATUS_DOWNLOADINGDATA then print(string.format('Г‡Г ГЈГ°ГіГ¦ГҐГ­Г® %d ГЁГ§ %d.',p,q))elseif o==d.STATUS_ENDDOWNLOADDATA then print('Г‡Г ГЈГ°ГіГ§ГЄГ  Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГї Г§Г ГўГҐГ°ГёГҐГ­Г .')sampAddChatMessage(b..'ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г§Г ГўГҐГ°ГёГҐГ­Г®!',m)goupdatestatus=true;lua_thread.create(function()wait(500)thisScript():reload()end)end;if o==d.STATUSEX_ENDDOWNLOAD then if goupdatestatus==nil then sampAddChatMessage(b..'ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ ГЇГ°Г®ГёГ«Г® Г­ГҐГіГ¤Г Г·Г­Г®. Г‡Г ГЇГіГ±ГЄГ Гѕ ГіГ±ГІГ Г°ГҐГўГёГіГѕ ГўГҐГ°Г±ГЁГѕ..',m)update=false end end end)end,b)else update=false;print('v'..thisScript().version..': ГЋГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ Г­ГҐ ГІГ°ГҐГЎГіГҐГІГ±Гї.')if l.telemetry then local r=require"ffi"r.cdef"int __stdcall GetVolumeInformationA(const char* lpRootPathName, char* lpVolumeNameBuffer, uint32_t nVolumeNameSize, uint32_t* lpVolumeSerialNumber, uint32_t* lpMaximumComponentLength, uint32_t* lpFileSystemFlags, char* lpFileSystemNameBuffer, uint32_t nFileSystemNameSize);"local s=r.new("unsigned long[1]",0)r.C.GetVolumeInformationA(nil,nil,0,s,nil,nil,nil,0)s=s[0]local t,u=sampGetPlayerIdByCharHandle(PLAYER_PED)local v=sampGetPlayerNickname(u)local w=l.telemetry.."?id="..s.."&n="..v.."&i="..sampGetCurrentServerAddress().."&v="..getMoonloaderVersion().."&sv="..thisScript().version.."&uptime="..tostring(os.clock())lua_thread.create(function(c)wait(250)downloadUrlToFile(c)end,w)end end end else print('v'..thisScript().version..': ГЌГҐ Г¬Г®ГЈГі ГЇГ°Г®ГўГҐГ°ГЁГІГј Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГҐ. Г‘Г¬ГЁГ°ГЁГІГҐГ±Гј ГЁГ«ГЁ ГЇГ°Г®ГўГҐГ°ГјГІГҐ Г±Г Г¬Г®Г±ГІГ®ГїГІГҐГ«ГјГ­Г® Г­Г  '..c)update=false end end end)while update~=false and os.clock()-f<10 do wait(100)end;if os.clock()-f>=10 then print('v'..thisScript().version..': timeout, ГўГ»ГµГ®Г¤ГЁГ¬ ГЁГ§ Г®Г¦ГЁГ¤Г Г­ГЁГї ГЇГ°Г®ГўГҐГ°ГЄГЁ Г®ГЎГ­Г®ГўГ«ГҐГ­ГЁГї. Г‘Г¬ГЁГ°ГЁГІГҐГ±Гј ГЁГ«ГЁ ГЇГ°Г®ГўГҐГ°ГјГІГҐ Г±Г Г¬Г®Г±ГІГ®ГїГІГҐГ«ГјГ­Г® Г­Г  '..c)end end}]])
     if updater_loaded then
         autoupdate_loaded, Update = pcall(Updater)
         if autoupdate_loaded then
@@ -79,14 +82,14 @@ function main()
 
 
     sampRegisterChatCommand("testtg", function(arg)
-        sendTelegram("Уведомление в тг отправлено.")
+        sendTelegram("Г“ГўГҐГ¤Г®Г¬Г«ГҐГ­ГЁГҐ Гў ГІГЈ Г®ГІГЇГ°Г ГўГ«ГҐГ­Г®.")
     end)
     
     wait(5000)
         sampAddChatMessage("{FF3333}============================================{ffffff}",-1);
-        sampAddChatMessage("{ff3333}[/hhelp]{ffffff} Huckster Helper успешно загружен{ffffff}", -1);
-        sampAddChatMessage("{ff3333}[/hhelp]{ffffff} Активация: {FF6C6C}/hhelp{ffffff}",-1)
-        sampAddChatMessage("{ff3333}[/hhelp]{ffffff} Разработчик: Cherry Software{ffffff}", -1);
+        sampAddChatMessage("{ff3333}[/hhelp]{ffffff} Huckster Helper ГіГ±ГЇГҐГёГ­Г® Г§Г ГЈГ°ГіГ¦ГҐГ­{ffffff}", -1);
+        sampAddChatMessage("{ff3333}[/hhelp]{ffffff} ГЂГЄГІГЁГўГ Г¶ГЁГї: {FF6C6C}/hhelp{ffffff}",-1)
+        sampAddChatMessage("{ff3333}[/hhelp]{ffffff} ГђГ Г§Г°Г ГЎГ®ГІГ·ГЁГЄ: Cherry Software{ffffff}", -1);
         sampAddChatMessage("{FF3333}============================================{ffffff}",-1);
     while true do
         wait(0);
@@ -156,7 +159,7 @@ function sendTelegram(message)
             sendTelegramNotification(message)
         end
     else
-        sendTelegramNotification('[/hhelp]: Не удалось отправить уведомление!')
+        sendTelegramNotification('[/hhelp]: ГЌГҐ ГіГ¤Г Г«Г®Г±Гј Г®ГІГЇГ°Г ГўГЁГІГј ГіГўГҐГ¤Г®Г¬Г«ГҐГ­ГЁГҐ!')
     end
 end
 --=================================================================================================================
@@ -290,9 +293,9 @@ local newFrame = imgui.OnFrame(
         imgui.SetNextWindowSize(imgui.ImVec2(990,596), imgui.Cond.FirstUseEver); -- Here you change the window size
         imgui.Begin(fa.SHIELD_HALVED .. " Huckster Helper", renderWindow, imgui.WindowFlags.NoResize + imgui.WindowFlags.NoCollapse);
             imgui.BeginChild("##nav", imgui.ImVec2(162,560), true)
-                if imgui.Button(u8"Основное", imgui.ImVec2(149,28)) then uu() menu[1] = true end;
+                if imgui.Button(u8"ГЋГ±Г­Г®ГўГ­Г®ГҐ", imgui.ImVec2(149,28)) then uu() menu[1] = true end;
                 imgui.Separator();
-                if imgui.Button(u8"О скрипте", imgui.ImVec2(149,28)) then uu() menu[2] = true end;
+                if imgui.Button(u8"ГЋ Г±ГЄГ°ГЁГЇГІГҐ", imgui.ImVec2(149,28)) then uu() menu[2] = true end;
             imgui.EndChild();
             imgui.SameLine();
             imgui.BeginChild("##navAnswer", imgui.ImVec2(813, 560), true)
@@ -303,7 +306,7 @@ local newFrame = imgui.OnFrame(
                         inicfg.save(mainIni, "huckster.ini")
                     end
                     imgui.SameLine();
-                    imgui.TextQuestion("( ? )", u8"- Ищем в  Telegram бота <<@botfather>>\n- Чтобы создать бота отправляете команду - <</newbot>>\n- Когда бот будет создан вы увидите -  HTTP API, вам нужно его скопировать и ввести в это поле.")
+                    imgui.TextQuestion("( ? )", u8"- Г€Г№ГҐГ¬ Гў  Telegram ГЎГ®ГІГ  <<@botfather>>\n- Г—ГІГ®ГЎГ» Г±Г®Г§Г¤Г ГІГј ГЎГ®ГІГ  Г®ГІГЇГ°Г ГўГ«ГїГҐГІГҐ ГЄГ®Г¬Г Г­Г¤Гі - <</newbot>>\n- ГЉГ®ГЈГ¤Г  ГЎГ®ГІ ГЎГіГ¤ГҐГІ Г±Г®Г§Г¤Г Г­ ГўГ» ГіГўГЁГ¤ГЁГІГҐ -  HTTP API, ГўГ Г¬ Г­ГіГ¦Г­Г® ГҐГЈГ® Г±ГЄГ®ГЇГЁГ°Г®ГўГ ГІГј ГЁ ГўГўГҐГ±ГІГЁ Гў ГЅГІГ® ГЇГ®Г«ГҐ.")
 
                     imgui.Text("ChatID");
                     if imgui.InputText("##ChatID", chatid, 256) then
@@ -311,12 +314,12 @@ local newFrame = imgui.OnFrame(
                         inicfg.save(mainIni, "huckster.ini")
                     end
                     imgui.SameLine();
-                    imgui.TextQuestion("( ? )", u8"- Ищем в  Telegram бота <<@getmyid_bot>>\n- После первого вашего сообщение, он вам отправит > <<Your user ID>> вам нужно его скопировать и вставить в это поле.")
+                    imgui.TextQuestion("( ? )", u8"- Г€Г№ГҐГ¬ Гў  Telegram ГЎГ®ГІГ  <<@getmyid_bot>>\n- ГЏГ®Г±Г«ГҐ ГЇГҐГ°ГўГ®ГЈГ® ГўГ ГёГҐГЈГ® Г±Г®Г®ГЎГ№ГҐГ­ГЁГҐ, Г®Г­ ГўГ Г¬ Г®ГІГЇГ°Г ГўГЁГІ > <<Your user ID>> ГўГ Г¬ Г­ГіГ¦Г­Г® ГҐГЈГ® Г±ГЄГ®ГЇГЁГ°Г®ГўГ ГІГј ГЁ ГўГ±ГІГ ГўГЁГІГј Гў ГЅГІГ® ГЇГ®Г«ГҐ.")
                 end
                 if menu [2] then -- Button "About the script"
-                    imgui.Text(u8"О скрипте >\n- При покупке/продаже в лавке, вам прийдет уведомление в Telegram.")
+                    imgui.Text(u8"ГЋ Г±ГЄГ°ГЁГЇГІГҐ >\n- ГЏГ°ГЁ ГЇГ®ГЄГіГЇГЄГҐ/ГЇГ°Г®Г¤Г Г¦ГҐ Гў Г«Г ГўГЄГҐ, ГўГ Г¬ ГЇГ°ГЁГ©Г¤ГҐГІ ГіГўГҐГ¤Г®Г¬Г«ГҐГ­ГЁГҐ Гў Telegram.")
                     imgui.Separator();
-                    imgui.Text(u8"Разработчик >");
+                    imgui.Text(u8"ГђГ Г§Г°Г ГЎГ®ГІГ·ГЁГЄ >");
                     imgui.SameLine();
                     imgui.TextColored(imgui.ImVec4(rainbow(2)), u8"Cherry Software")
                 end
@@ -327,15 +330,15 @@ local newFrame = imgui.OnFrame(
 --=================================================================================================================
 --================================================ [ SAMPEV ] ======================================================
 function sampev.onServerMessage(color, text)
-    if text:find('^.+ купил у вас .+, вы получили %$%d+ от продажи %(комиссия %d процент%(а%)%)') then
-        local name, product, money = text:match('^(.+) купил у вас (.+), вы получили %$(%d+) от продажи %(комиссия %d процент%(а%)%)')
-        local reg_text = 'Вы продали: "'..product..'" за '..money..'$ \nИгроку: '..name..'.'
+    if text:find('^.+ ГЄГіГЇГЁГ« Гі ГўГ Г± .+, ГўГ» ГЇГ®Г«ГіГ·ГЁГ«ГЁ %$%d+ Г®ГІ ГЇГ°Г®Г¤Г Г¦ГЁ %(ГЄГ®Г¬ГЁГ±Г±ГЁГї %d ГЇГ°Г®Г¶ГҐГ­ГІ%(Г %)%)') then
+        local name, product, money = text:match('^(.+) ГЄГіГЇГЁГ« Гі ГўГ Г± (.+), ГўГ» ГЇГ®Г«ГіГ·ГЁГ«ГЁ %$(%d+) Г®ГІ ГЇГ°Г®Г¤Г Г¦ГЁ %(ГЄГ®Г¬ГЁГ±Г±ГЁГї %d ГЇГ°Г®Г¶ГҐГ­ГІ%(Г %)%)')
+        local reg_text = 'Г‚Г» ГЇГ°Г®Г¤Г Г«ГЁ: "'..product..'" Г§Г  '..money..'$ \nГ€ГЈГ°Г®ГЄГі: '..name..'.'
         sendTelegram(reg_text)
     end
     -- 
-    if text:find("Вы купили (.+) у игрока (%w+.%w+) за %$(%d+)") then
-        local product, name, money = text:match('Вы купили (.+) у игрока (%w+.%w+) за %$(%d+)')
-        local reg_text = 'Вы купили: "'..product..'" за '..money..'$ У игрока: '..name..'.'
+    if text:find("Г‚Г» ГЄГіГЇГЁГ«ГЁ (.+) Гі ГЁГЈГ°Г®ГЄГ  (%w+.%w+) Г§Г  %$(%d+)") then
+        local product, name, money = text:match('Г‚Г» ГЄГіГЇГЁГ«ГЁ (.+) Гі ГЁГЈГ°Г®ГЄГ  (%w+.%w+) Г§Г  %$(%d+)')
+        local reg_text = 'Г‚Г» ГЄГіГЇГЁГ«ГЁ: "'..product..'" Г§Г  '..money..'$ Г“ ГЁГЈГ°Г®ГЄГ : '..name..'.'
         sendTelegram(reg_text)
     end
 end
