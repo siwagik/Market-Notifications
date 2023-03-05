@@ -1,7 +1,7 @@
 # Market-Notifications
 Market Notifications for Arizona RP
 
-Зависимости скрипта - 
+Dependencies  - 
 - Mimgui
 - effil
 - samp.lua
