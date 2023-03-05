@@ -8,6 +8,7 @@ Dependencies  -
 - ffi
 - ssl.https
 - fAwesome6_solid
+- IniCfg
 
 Example message:
 - Buying > [Phoenix] Nick_Name(56): Вы купили: "Бронзовая рулетка(1 шт.)" за 10000$ У игрока: Nick_Name.
