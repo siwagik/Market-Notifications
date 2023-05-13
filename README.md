@@ -1,5 +1,5 @@
-# Huckster Helper
-Huckster Helper for Arizona RP
+# Market Notifications
+Market Notifications for Arizona RP
 
 Dependencies  - 
 - Mimgui
