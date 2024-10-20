@@ -1,5 +1,4 @@
 # Market Notifications
-Market Notifications for Arizona RP
 
 Dependencies  - 
 - Mimgui
